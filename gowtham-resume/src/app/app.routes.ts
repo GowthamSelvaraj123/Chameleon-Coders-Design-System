@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
+import { AppModuleModule } from './app.module';
 export const routes: Routes = [
-    { path: '', component: AppComponent },
-    { path: 'dashboard', component: AppComponent },
+    { path: '', loadChildren: () => import('./app.module').then(m => m.AppModuleModule)},
+//    { path: 'dashboard', component: AppComponent },
     { path: '**', redirectTo: '' }  // Redirect to home on unknown routes
   ];
   
