@@ -1,1 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+*{padding:0px;margin:0px;   }
+.cc-container {max-width: 1400px;margin: 0 auto;}
+.cc-row{display: flex;align-items: center;}
+.cc-flex{display: flex;}
+.cc-block{display:block;}
+.cc-inline{display:inline-block;}
+.cc-col-lg-6{width:50%;}
+.cc-menus {list-style-type: none;}
+.cc-menus-horizontal{display: flex;flex-direction: row;position: relative;}
+.cc-menus-horizontal a {text-decoration: unset;}
+.cc-menu a {padding: 10px;}
+.cc-align-items-start {align-items: flex-start;}
+.cc-align-items-center {align-items: center;}
+.cc-align-items-end {align-items: flex-end;}
+.cc-justify-content-start {justify-content: flex-start;}
+.cc-justify-content-center {justify-content: center;}
+.cc-justify-content-end {justify-content: flex-end;}
+.cc-nested-menus{display: none;margin-top:20px;}
+.cc-hover:hover .cc-nested-menus{display: flex; flex-direction: column; list-style-type: none; position: absolute; top: 20px; background-color: #f1f1f1; padding: 10px; border-radius: 10px;}
+.cc-nested-menus li.cc-menu {padding: 5px 10px;}

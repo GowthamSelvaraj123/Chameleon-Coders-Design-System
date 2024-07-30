@@ -1,1 +1,16 @@
-<p>header-component works!</p>
+<header>
+    <div class="cc-container">
+        <div class="cc-row">
+        <div class="cc-col-lg-6"><h1>Gowtham</h1></div>
+        <div class="cc-col-lg-6"><div class="menu-wrap">
+            <ul  class="cc-menus cc-menus-horizontal cc-align-items-center cc-justify-content-end">
+                <li *ngFor="let menu of menus" class="cc-menu {{menu.hover}}"><a href="#">{{ menu.name }}</a>
+                    <ul class="cc-nested-menus" *ngIf="menu.submenu">
+                        <li class="cc-menu" *ngFor="let item of menu.submenu">{{ item }}</li>
+                    </ul>
+                </li>
+            </ul>
+        </div></div>
+    </div>
+    </div>
+</header>
