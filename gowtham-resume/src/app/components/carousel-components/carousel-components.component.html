@@ -1,15 +1,24 @@
-<div class="carousel">
+<div class="cc-carousel">
     <div class="cc-container">
         <div class="cc-row">
-            <div class="cc-col-12">
+            <div class="cc-col-lg-12">
                 <div class="cc-hero-slider">
-                    <div *ngFor="let heroContent of heroContents" class="cc-hero-content">
+                    <div class="arrow"(click)="onPrev()">></div>
+                    <ng-container *ngFor="let heroContent of heroContents; let i = index">
+                    <div class="cc-hero-content" [ngClass]="{'cc-hide':activeIndex !== i}">
                         <h1>{{heroContent.title}}</h1>
                         <p>{{heroContent.content}}</p>
                         <button>{{heroContent.button}}</button>
                     </div>
+                    </ng-container>
+                    <div class="arrow" (click)="onNext()"><</div>
                 </div>
+            <div class="cc-dots">
+                <ng-container *ngFor="let heroContent of heroContents; let i = index">
+                <div class="cc-dot"></div>
+                </ng-container>
             </div>
+        </div>
         </div>
     </div>
 </div>
