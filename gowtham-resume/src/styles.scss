@@ -29,7 +29,10 @@
 .cc-justify-content-end {justify-content: flex-end;}
 
 
+.cc-next-arrow, .cc-prev-arrow, .cc-dot{cursor: pointer;}
 .cc-hide{display: none;}
 .cc-dot{width: 10px; height: 10px; background-color: #999999; border-radius: 10px;margin-right: 12px;}
 .cc-dots {display: flex;justify-content: center;}
 .cc-carousel {background-color: #d8d8d8;padding: 60px 0px;}
+
+button.cc-btn {padding: 10px 20px;border: unset;margin-top: 20px;}

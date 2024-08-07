@@ -38,4 +38,8 @@ export class CarouselComponentsComponent {
       }
       console.log(this.activeIndex);
     }
+    matchDot(index: number): void
+    {
+      this.activeIndex = index;
+    }
 }

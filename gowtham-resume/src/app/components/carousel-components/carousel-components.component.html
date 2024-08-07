@@ -3,19 +3,19 @@
         <div class="cc-row">
             <div class="cc-col-lg-12">
                 <div class="cc-hero-slider">
-                    <div class="arrow"(click)="onPrev()">></div>
+                    <div class="cc-prev-arrow"(click)="onPrev()">></div>
                     <ng-container *ngFor="let heroContent of heroContents; let i = index">
                     <div class="cc-hero-content" [ngClass]="{'cc-hide':activeIndex !== i}">
                         <h1>{{heroContent.title}}</h1>
                         <p>{{heroContent.content}}</p>
-                        <button>{{heroContent.button}}</button>
+                        <button class="cc-btn cc-btn-primary">{{heroContent.button}}</button>
                     </div>
                     </ng-container>
-                    <div class="arrow" (click)="onNext()"><</div>
+                    <div class="cc-next-arrow" (click)="onNext()"><</div>
                 </div>
             <div class="cc-dots">
                 <ng-container *ngFor="let heroContent of heroContents; let i = index">
-                <div class="cc-dot"></div>
+                <div class="cc-dot"  (click)="matchDot(i)"></div>
                 </ng-container>
             </div>
         </div>
